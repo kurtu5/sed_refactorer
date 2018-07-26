@@ -126,7 +126,12 @@ find_mode() { case $1 in
 	exit ;;
 esac; }
 
+history_mode() { case $1 in
+	start)
+		sed -ne "s/$2//p" $HISTORY_FILE | history -r -
+	
 
+}
 history_uniq() {
 	local debug=""
 	if history | grep -qF "$*"; then
@@ -147,5 +152,4 @@ switch_mode 'sed_mode'
 while [[ true ]]; do
 	read -rep "$($mode prompt)" line
 	$mode command $line
-	#[[ "$mode" == "sed_mode" ]] && history_uniq $line
 done
