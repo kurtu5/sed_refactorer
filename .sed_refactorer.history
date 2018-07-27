@@ -1,2 +1,25 @@
-good
-s/\.others\['\([^']*\)'\]/.sib('\1')/
+find_mode	    1  main
+find_mode	    2  exit
+find_mode	    3  help
+find_mode	    4  ?
+find_mode	    5  sed
+find_mode	    6  list
+find_mode	    7  args
+find_mode	    8  dry
+sed_mode	    1  exit
+sed_mode	    2  help
+sed_mode	    3  ?
+sed_mode	    4  find
+sed_mode	    5  main
+sed_mode	    6  s/\.others\['\([^']*\)'\]/.sib('\1')/
+sed_mode	    8  sedscript_u
+sed_mode	    9  s/\.others\['\([^']*\)'\]/.sibling('\1')/
+main_mode	    1  ?
+main_mode	    2  exit
+main_mode	    3  p
+main_mode	    4  help
+main_mode	    5  find
+main_mode	    6  sed
+main_mode	    7  aad
+find_args_mode	    1  . -type f
+find_args_mode	    2  . -type f -name *.py
